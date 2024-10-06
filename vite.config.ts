@@ -4,11 +4,13 @@ import { type UserConfig, defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import svgrPlugin from 'vite-plugin-svgr';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     viteTsconfigPaths(),
     svgrPlugin({
       // svgr options: https://react-svgr.com/docs/options/
